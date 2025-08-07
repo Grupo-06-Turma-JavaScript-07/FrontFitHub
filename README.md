@@ -67,3 +67,6 @@ export default tseslint.config([
   },
 ])
 ```
+
+# FrontFitHub
+Front End da aplicação de monitoramento fitness
