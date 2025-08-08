@@ -1,6 +1,6 @@
 function CadastrarCategory() {
   return (
-    <div>CadastrarCategory</div>
+    <div></div>
   )
 }
 

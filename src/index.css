@@ -1,1 +1,8 @@
 @import 'tailwindcss';
+
+.home{
+    background-image: url(https://cdn.discordapp.com/attachments/1374009340561981542/1403382582804086926/Design_sem_nome.png.png?ex=68975961&is=689607e1&hm=1278ec046517d888c42cacf9f5a2716b6e0825973d88514cd528e43dfc9dd63d&);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

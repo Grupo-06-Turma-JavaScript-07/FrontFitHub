@@ -1,7 +1,7 @@
 
 function AtualizarCategory() {
   return (
-    <div>AtualizarCategory</div>
+    <div></div>
   )
 }
 

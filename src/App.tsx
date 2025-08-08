@@ -1,7 +1,12 @@
+import { BrowserRouter } from "react-router-dom"
+import Principal from "./pages/principal/Principal"
 
 function App() {
+
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <Principal />
+    </BrowserRouter>
   )
 }
 
