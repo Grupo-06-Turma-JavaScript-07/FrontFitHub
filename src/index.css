@@ -6,3 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.sombra{
+    box-shadow: 7px 7px 10px rgba(253, 211, 71, 0.5);
+}
