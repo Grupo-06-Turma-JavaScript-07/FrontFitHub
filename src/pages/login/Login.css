@@ -1,0 +1,8 @@
+.fundoLogin {
+    background-image: url("https://images-ext-1.discordapp.net/external/fLxGfWMyqUK7C3O5kfNBsD0VtT2SG5VBgzRGem0yII8/https/i.imgur.com/dE34T9c.jpg?format=webp&width=880&height=586");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    background-size: contain;
+    background-position: right;
+}
