@@ -3,9 +3,10 @@ import type Usuario from "./Usuario";
 
 export default interface Produtos {
   id: number;
-  titulo: string;
-  texto: string;
-  data: string;
-  category?: Categoria | null
+  name: string;
+  description: string;
+  execution: string;
+  time: string;  
   user: Usuario | null
+  category?: Categoria | null
 }

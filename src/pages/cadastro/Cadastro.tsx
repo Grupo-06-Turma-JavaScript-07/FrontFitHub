@@ -20,12 +20,13 @@ function Cadastro() {
     // criação do estado que irá gerenciar os dados que o usuário vai digitar no formulário
     const [usuario, setUsuario] = useState<Usuario>({
         id: 0,
-        name: '',
+        nome: '',
         usuario: '',
         senha: '',
         foto: '',
         weight: 0,
-        height: 0
+        height: 0,
+        imc: 0
     });
 
     // efeito automático que irá direcionar o usuário para a tela de login quando o ID for diferente de zero, ou seja, quando conseguir cadastrar no backend e ele devolver um json com ID preenchido pro front, esse UseEffect fica olhando modificações no estado do Usuario para conseguir direcionar a navegação
@@ -110,7 +111,7 @@ function Cadastro() {
                             placeholder="Nome"
                             className="border-2 border-slate-700 rounded p-2"
                             // cada um dos inputs precisam receber um campo "value", para que o react possa entender o que está sendo digitado nele, e esse value está vinculado com alguma variavel, nesse caso, com o campo nome do estado Usuario, criado la em cima no useState
-                            value={usuario.name}
+                            value={usuario.nome}
                             // quando ouverem modificações no campo (onChange), tratar isso como um evento, e atualizar o estado de Usuario
                             onChange={(e: ChangeEvent<HTMLInputElement>) =>
                                 atualizarEstado(e)

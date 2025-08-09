@@ -1,15 +1,29 @@
 // src/components/produtos/listarprodutos/ListarProdutos.tsx
+import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Pencil, Trash } from "@phosphor-icons/react";
 import SidebarPersonal from "../../sidebar/SidebarPersonal";
+import type Produtos from '../../../model/Produtos';
+import { buscar } from '../../../services/Service';
+import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 function ListarProdutos() {
-    // Dados estáticos para simular os produtos
-    const mockProdutos = [
-        { id: 1, nome: "Supino Reto", categoria: "Superiores" },
-        { id: 2, nome: "Agachamento Livre", categoria: "Inferiores" },
-        { id: 3, nome: "Corrida na Esteira", categoria: "Cardio" },
-    ];
+    // Estado para armazenar a lista de produtos que virá da API
+    const [produtos, setProdutos] = useState<Produtos[]>([]);
+
+    // Função para buscar os produtos no back-end
+    async function buscarProdutos() {
+        try {
+            await buscar('/product', setProdutos, {}); // Usando o endpoint "/product" do seu back-end
+        } catch (error: any) {
+            ToastAlerta('Erro ao buscar os produtos.', 'erro');
+        }
+    }
+
+    // O useEffect chama a função de busca assim que o componente é renderizado
+    useEffect(() => {
+        buscarProdutos();
+    }, []);
 
     return (
         <div className="flex bg-neutral-900 text-white min-h-[85vh]">
@@ -37,10 +51,13 @@ function ListarProdutos() {
                             </tr>
                         </thead>
                         <tbody>
-                            {mockProdutos.map(produto => (
+                            {/* Agora o .map usa os dados do estado 'produtos', que vêm da API */}
+                            {produtos.map(produto => (
                                 <tr key={produto.id} className="border-b border-neutral-700 hover:bg-neutral-700/50">
-                                    <td className="p-4">{produto.nome}</td>
-                                    <td className="p-4">{produto.categoria}</td>
+                                    {/* Usamos as propriedades do nosso modelo: produto.name e produto.category */}
+                                    <td className="p-4">{produto.name}</td>
+                                    {/* Usamos "?." para acessar o nome da categoria de forma segura */}
+                                    <td className="p-4">{produto.category?.category}</td>
                                     <td className="p-4">
                                         <div className="flex justify-center gap-4">
                                             <Link to={`/editarproduto/${produto.id}`} className="text-blue-400 hover:text-blue-300">
