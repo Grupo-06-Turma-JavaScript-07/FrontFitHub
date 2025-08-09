@@ -6,6 +6,6 @@ export default interface Produtos {
   titulo: string;
   texto: string;
   data: string;
-  categoria?: Categoria | null
-  usuario?: Usuario | null
+  category?: Categoria | null
+  user: Usuario | null
 }

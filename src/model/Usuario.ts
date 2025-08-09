@@ -2,9 +2,11 @@ import type Produtos from "./Produtos"
 
 export default interface Usuario {
   id: number
-  nome: string
+  name: string
   usuario: string
   senha: string
   foto: string
-  produtos?: Produtos[] | null
+  weight: number; 
+  height: number; 
+  product?: Produtos[] | null
 }
