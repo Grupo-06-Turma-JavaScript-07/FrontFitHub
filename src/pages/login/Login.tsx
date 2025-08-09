@@ -1,22 +1,18 @@
-import { useContext, useEffect, useState, type ChangeEvent } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../contexts/AuthContext';
+import {  useState, type ChangeEvent } from 'react';
+import { Link } from 'react-router-dom';
+
 import type UsuarioLogin from '../../model/UsuarioLogin';
 import './Login.css';
-import { RotatingLines } from 'react-loader-spinner';
+
 
 function Login() {
-    const navigate = useNavigate();
+    
 
-    const { handleLogin, usuario, isLoading } = useContext(AuthContext);
+    
 
     const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({} as UsuarioLogin);
 
-    useEffect(() => {
-        if (usuario.token !== "") {
-            navigate('/home');
-        }
-    }, [navigate, usuario]);
+   
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setUsuarioLogin({
@@ -27,7 +23,7 @@ function Login() {
 
     function login(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
-        handleLogin(usuarioLogin);
+        
     }
 
     return (
@@ -63,17 +59,7 @@ function Login() {
                         type="submit"
                         className="rounded bg-indigo-400 flex justify-center hover:bg-indigo-900 text-white w-1/2 py-2"
                     >
-                        {isLoading ? (
-                            <RotatingLines
-                                strokeColor="white"
-                                strokeWidth="5"
-                                animationDuration="0.75"
-                                width="24"
-                                visible={true}
-                            />
-                        ) : (
-                            <span>Entrar</span>
-                        )}
+                       
                     </button>
 
                     <hr className="border-slate-800 w-full" />

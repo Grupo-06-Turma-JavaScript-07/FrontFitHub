@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useContext, useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { AuthContext } from '../../contexts/AuthContext';
+
 import type Usuario from '../../model/Usuario';
 import { buscar } from '../../services/Service';
 import { TrashIcon } from '@phosphor-icons/react';
@@ -12,8 +12,7 @@ function PerfilPlus() {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
 
-    // trazendo a context, pra poder pegar o token, sem ele, não rola de fazer o GET
-    const { usuario } = useContext(AuthContext);
+   
     // estado onde iremos gaurdar o usuário que está vindo do backend
     const [usuarioLogado, setUsuarioLogado] = useState<Usuario>({} as Usuario);
 
@@ -21,7 +20,7 @@ function PerfilPlus() {
     async function getUserById() {
         try {
             await buscar(`/usuarios/${id}`, setUsuarioLogado, {
-                headers: { Authorization: usuario.token },
+               
             });
         } catch (error: any) {
             if (error.toString().includes('401')) {
