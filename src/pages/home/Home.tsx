@@ -1,15 +1,22 @@
 // src/pages/home/Home.tsx
 import Principal from "../principal/Principal";
-import Produtos from "../produtos/Produtos";
 import SobreNos from "../sobrenos/SobreNos";
+import Produtos from "../produtos/Produtos";
 
 function Home() {
     return (
         <>
-            {/* Este componente agora renderiza todas as seções da sua página principal original */}
             <Principal />
-            <Produtos />
-            <SobreNos />
+
+          
+            <div id="produtos">
+                <Produtos />
+            </div>
+
+            
+            <div id="sobrenos">
+                <SobreNos />
+            </div>
         </>
     );
 }

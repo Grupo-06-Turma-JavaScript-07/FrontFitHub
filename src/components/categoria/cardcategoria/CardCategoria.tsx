@@ -1,17 +1,14 @@
 import { Link } from 'react-router-dom';
+import type Categoria from '../../../model/Categoria';
+
 
 interface CardCategoriaProps {
-  categoria: {
-    id: number;
-    nome: string;
-  };
+  categoria: Categoria;
 }
 
 function CardCategoria({ categoria }: CardCategoriaProps) {
   return (
-    // O Link vai englobar todo o card, tornando-o clicável.
-    // A rota será dinâmica no futuro, baseada no ID ou nome da categoria.
-   <Link to={`/produtos/categoria/${categoria.id}`} className="block">
+    <Link to={`/produtos/categoria/${categoria.id}`} className="block">
       <div className="
         bg-yellow-400 text-black font-bold uppercase text-2xl 
         flex justify-center items-center h-32 rounded-lg 
@@ -19,7 +16,7 @@ function CardCategoria({ categoria }: CardCategoriaProps) {
         transition-all duration-300 ease-in-out cursor-pointer
         font-anton
       ">
-        {categoria.nome}
+        {categoria.category}
       </div>
     </Link>
   );

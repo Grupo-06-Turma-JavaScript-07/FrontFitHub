@@ -1,4 +1,3 @@
-// src/components/categoria/deletarcategoria/DeletarCategoria.tsx
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import type Categoria from '../../../model/Categoria';

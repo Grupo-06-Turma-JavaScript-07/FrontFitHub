@@ -1,20 +1,25 @@
-// src/components/sidebar/SidebarPersonal.tsx
 import { Link } from 'react-router-dom';
+import { useAppContext } from '../../contexts/AppContext'; 
 
 function SidebarPersonal() {
+
+  const { usuario } = useAppContext();
+
   return (
     <aside className="w-64 bg-neutral-800 text-white flex flex-col p-4 shadow-lg">
       <div className="flex flex-col items-center mb-8">
+     
         <img 
-          src="https://ik.imagekit.io/2zvbvzaqt/usuario.png" 
+          src={usuario.foto || "https://ik.imagekit.io/2zvbvzaqt/usuario.png"} 
           alt="Foto do Personal" 
           className="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover" 
         />
-        <h3 className="mt-4 font-bold text-lg">Nome do Personal</h3>
+        
+        <h3 className="mt-4 font-bold text-lg">{usuario.nome}</h3>
       </div>
 
       <nav className="flex flex-col gap-4 text-lg">
-        {/* Links específicos para o Personal Trainer */}
+      
         <Link to="/home" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Home</Link>
         <Link to="/categorias/gerenciar" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Gerenciar Categorias</Link>
         <Link to="/produtos/gerenciar" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Gerenciar Produtos</Link>

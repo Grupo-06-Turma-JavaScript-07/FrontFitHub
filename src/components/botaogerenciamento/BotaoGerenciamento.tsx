@@ -1,4 +1,3 @@
-// src/components/botaogerenciamento/BotaoGerenciamento.tsx
 import { Link } from 'react-router-dom';
 
 interface BotaoGerenciamentoProps {

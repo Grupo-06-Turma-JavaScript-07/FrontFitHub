@@ -54,15 +54,10 @@ function FormularioProduto() {
     async function gerarNovoProduto(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
-        // Criamos um objeto para a API, adicionando um usuário fixo
-        const produtoParaApi = {
-            ...produto,
-            user: { id: 0 }
-        };
+        const produtoParaApi = { ...produto, user: { id: 2 } };
 
         if (id !== undefined) {
             try {
-                // Enviamos o objeto com o usuário fixo
                 await atualizar(`/product`, produtoParaApi, setProduto, {});
                 ToastAlerta('Produto atualizado com sucesso!', 'sucesso');
                 retornar();
@@ -71,21 +66,20 @@ function FormularioProduto() {
             }
         } else {
             try {
-                // Enviamos o objeto com o usuário fixo
                 await cadastrar(`/product`, produtoParaApi, setProduto, {});
                 ToastAlerta('Produto cadastrado com sucesso!', 'sucesso');
+                retornar();
             } catch (error: any) {
                 ToastAlerta('Erro ao cadastrar o Produto.', 'erro');
             }
         }
-        retornar();
+
     }
 
     function retornar() {
         navigate('/produtos/gerenciar');
     }
 
-    // O restante do seu código (o return com o JSX) continua igual...
     return (
         <div className="flex items-center justify-center bg-neutral-900 text-white p-8 min-h-[85vh]">
             <form className="bg-neutral-800 p-8 rounded-lg w-full max-w-2xl" onSubmit={gerarNovoProduto}>
@@ -108,8 +102,17 @@ function FormularioProduto() {
                 </div>
 
                 <div className="mb-6">
-                    <label htmlFor="description" className="block text-amber-100 font-bold mb-2">Descrição Detalhada</label>
-                    <textarea name="description" value={produto.description} onChange={atualizarEstado} className="w-full p-3 bg-neutral-700 rounded" rows={3}></textarea>
+                    <label htmlFor="description" className="block text-amber-100 font-bold mb-2">
+        URL do Vídeo (Incorporado)
+    </label>
+    <textarea 
+        name="description" 
+        value={produto.description} 
+        onChange={atualizarEstado} 
+        className="w-full p-3 bg-neutral-700 rounded" 
+        rows={3}
+        placeholder="Cole aqui o link de 'incorporar' do YouTube"
+    ></textarea>
                 </div>
                 <div className="mb-6">
                     <label htmlFor="execution" className="block text-amber-100 font-bold mb-2">Execução Correta</label>
