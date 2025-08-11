@@ -5,6 +5,8 @@ function Perfil() {
   
   const { usuario } = useAppContext();
 
+  console.log('Este é o objeto USUÁRIO que o Perfil está recebendo:', usuario);
+
   return (
     <div className="flex bg-neutral-900 text-white min-h-[85vh]">
       <Sidebar />

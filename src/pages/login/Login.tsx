@@ -8,7 +8,14 @@ import './Login.css';
 
 function Login() {
     const { handleLogin, isLoading } = useAppContext();
-    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({} as UsuarioLogin);
+    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    senha: '',
+    foto: '',
+    token: ''
+});
     // Estado para guardar a seleção de perfil
     const [role, setRole] = useState<'user' | 'personal'>('user'); 
 

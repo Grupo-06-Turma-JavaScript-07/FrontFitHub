@@ -25,6 +25,7 @@ function Cadastro() {
         foto: '',
         weight: 0,
         height: 0,
+
     });
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {

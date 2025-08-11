@@ -1,4 +1,3 @@
-// src/contexts/AppContext.tsx
 import { createContext, type ReactNode, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type Usuario from '../model/Usuario';
@@ -83,3 +82,4 @@ export function AppProvider({ children }: AppProviderProps) {
 export function useAppContext() {
   return useContext(AppContext);
 }
+

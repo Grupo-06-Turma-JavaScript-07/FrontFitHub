@@ -17,12 +17,14 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 function Dashboard({ usuario }: DashboardProps) {
 
-    // O IMC agora vem do usuário logado
-    const imc = usuario.imc ? usuario.imc.toFixed(2) : 'N/A';
+    const imcValue = parseFloat(String(usuario.imc));
+
+    // O IMC vem do usuário logado
+    const imcDisplay = !isNaN(imcValue) ? imcValue.toFixed(2) : 'N/A';
 
     // A classificação do IMC é calculada dinamicamente
     let classificacao = 'Não calculado';
-    if (usuario.imc) {
+    if (typeof usuario.imc === 'number') {
         if (usuario.imc < 18.5) classificacao = 'Abaixo do peso';
         else if (usuario.imc < 24.9) classificacao = 'Peso normal';
         else if (usuario.imc < 29.9) classificacao = 'Sobrepeso';
@@ -34,7 +36,7 @@ function Dashboard({ usuario }: DashboardProps) {
             {/* Card do IMC exibe os dados dinâmicos */}
             <div className="bg-neutral-800 p-6 rounded-lg flex flex-col items-center justify-center">
                 <h2 className="text-2xl font-bold uppercase text-yellow-400 font-anton">Seu IMC</h2>
-                <p className="text-8xl font-bold my-4">{imc}</p>
+                <p className="text-8xl font-bold my-4">{imcDisplay}</p>
                 {/* 3. A classificação é dinâmica */}
                 <p className="text-lg text-amber-100">Classificação: {classificacao}</p>
             </div>
