@@ -1,6 +1,5 @@
-// src/components/navbar/Navbar.tsx
-import { Link as RouterLink } from "react-router-dom"; // Link de Navegação
-import { Link as ScrollLink } from "react-scroll";   // Link de Rolagem
+import { Link as RouterLink } from "react-router-dom"; 
+import { Link as ScrollLink } from "react-scroll";   
 import { useAppContext } from '../../contexts/AppContext';
 
 function Navbar() {
@@ -49,7 +48,7 @@ function Navbar() {
     <div className="w-full bg-neutral-900 p-4 text-amber-100 sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         <RouterLink to="/home">
-          <img src="URL_DO_LOGO" alt="Logo FitHub" className="w-10 h-10" />
+          <img src="https://ik.imagekit.io/pedrolazzz/IMG_2173.PNG?updatedAt=1754693890147" alt="Logo FitHub" className="w-10 h-10" />
         </RouterLink>
         {navLinks}
       </div>

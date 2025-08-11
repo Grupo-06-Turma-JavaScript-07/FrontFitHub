@@ -9,7 +9,7 @@ function Sidebar() {
       <div className="flex flex-col items-center mb-8">
         {/*A imagem usa a foto do usuário, com uma imagem padrão de reserva */}
         <img 
-          src={usuario.foto || "https://ik.imagekit.io/2zvbvzaqt/usuario.png"} 
+          src={usuario.foto || "https://ik.imagekit.io/pedrolazzz/fitness-teamwork-concept-with-elderly-couple_23-2147776970.jpg?updatedAt=1754920024601 "} 
           alt="Foto do usuário" 
           className="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover" 
         />
@@ -27,7 +27,7 @@ function Sidebar() {
 
       <div className="mt-auto flex justify-center p-4">
         <img 
-            src="https://media.discordapp.net/attachments/1374009340561981542/1403028110873727046/logo-empregadeverde1.png?ex=68960f40&is=6894bdc0&hm=9fff371d75d60db61ac2b4a93798faec80d8e5cfb889e90004bbe0e561665516&=&format=webp&quality=lossless&width=280&height=280"
+            src="https://ik.imagekit.io/pedrolazzz/IMG_2173.PNG?updatedAt=1754693890147"
             alt="Logo FitHub"
             className="w-16"
         />

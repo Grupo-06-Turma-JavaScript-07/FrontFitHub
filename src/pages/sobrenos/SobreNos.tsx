@@ -33,14 +33,14 @@ function SobreNos() {
 
                     {/* Imagem 1 */}
                     <img
-                        src="https://media.discordapp.net/attachments/1374009340561981542/1403434535882068108/vinicius.jpg?ex=689789c3&is=68963843&hm=aad0d505e791352b4c9ac7197e6cbc18eda11cb7de19801b7d2dcffe3e1067d7&=&format=webp&width=858&height=581"
+                        src="https://ik.imagekit.io/pedrolazzz/vinicius.jpg?updatedAt=1754920553785"
                         alt="Homem treinando com peso"
                         className="w-80 h-56 object-cover rounded-lg sombra transform -translate-x-12"
                     />
 
                     {/* Imagem 2 */}
                     <img
-                        src="https://images-ext-1.discordapp.net/external/1U1z-_6kZ6I5A1Sa9jqYOPfxd9lBG9pUGlEdPJqBRPE/https/i.imgur.com/tlGVPm3.jpg?format=webp&width=880&height=586"
+                        src="https://i.imgur.com/tlGVPm3.jpeg"
                         alt="homem treinando com corda naval"
                         className="w-80 h-56 object-cover rounded-lg transform translate-x-12 sombra"
 

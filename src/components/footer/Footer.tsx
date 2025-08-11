@@ -13,7 +13,7 @@ function Footer() {
             <div className="flex flex-wrap justify-center gap-10 md:gap-20">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-32 h-32 md:w-40 md:h-40 bg-neutral-500 rounded-full">
-                  <img src="https://media.discordapp.net/attachments/1374009340561981542/1402995925390983288/Juliana_Freddi_2_1.jpg?ex=689742c7&is=6895f147&hm=a0b3879f743d3519bd7ed231ab206166569de88b0b68500fbc1034f5a91aa27a&=&format=webp&width=390&height=586"
+                  <img src="https://ik.imagekit.io/pedrolazzz/Juliana_Freddi_2_1.jpg?updatedAt=1754919604935"
                     alt="Foto do Dev" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <p className="font-bold text-amber-100">Juliana Freddi</p>
@@ -33,7 +33,7 @@ function Footer() {
               </div>
               <div className="flex flex-col items-center gap-3">
                 <div className="w-32 h-32 md:w-40 md:h-40 bg-neutral-500 rounded-full">
-                  <img src="https://media.discordapp.net/attachments/1374009340561981542/1402692906099281971/Larissa.jpeg?ex=68977a11&is=68962891&hm=7bab0901242bce5c4837f8ce0453c077aecfe648e9b62e182eabc5880ac5be22&=&format=webp&width=423&height=371"
+                  <img src="https://ik.imagekit.io/pedrolazzz/Larissa.jpg?updatedAt=1754919604772"
                     alt="Foto do Dev" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <p className="font-bold text-amber-100">Larissa Santana</p>
@@ -52,7 +52,7 @@ function Footer() {
               </div>
               <div className="flex flex-col items-center gap-3">
                 <div className="w-32 h-32 md:w-40 md:h-40 bg-neutral-500 rounded-full">
-                  <img src="https://images-ext-1.discordapp.net/external/CnP_7Jkdy58CWySEDqaF0ZNtYx1zeOM8U-JYFA5BGEc/%3FupdatedAt%3D1754498159606/https/ik.imagekit.io/ludmily/perfil%2520quadrado.jpeg?format=webp&width=456&height=456"
+                  <img src="https://ik.imagekit.io/pedrolazzz/perfil20quadrado.jpg?updatedAt=1754919604936"
                     alt="Foto do Dev" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <p className="font-bold text-amber-100">Ludmily Oliveira</p>
@@ -75,7 +75,7 @@ function Footer() {
             <div className="flex flex-wrap justify-center gap-10 md:gap-20">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-32 h-32 md:w-40 md:h-40 bg-neutral-500 rounded-full">
-                  <img src="https://images-ext-1.discordapp.net/external/1fEs-dT_Cg-odskJD08JBCwdTO8irLkmspDORvivBRY/%3FupdatedAt%3D1754571230256/https/ik.imagekit.io/pedrolazzz/Untitled-1.png?format=webp&quality=lossless&width=280&height=280"
+                  <img src="https://ik.imagekit.io/pedrolazzz/Untitled-1.png?updatedAt=1754571230256"
                     alt="Foto do Dev" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <p className="font-bold text-amber-100">Matheus Schneider</p>
@@ -94,7 +94,7 @@ function Footer() {
               </div>
               <div className="flex flex-col items-center gap-3">
                 <div className="w-32 h-32 md:w-40 md:h-40 bg-neutral-500 rounded-full">
-                  <img src="https://images-ext-1.discordapp.net/external/3Ii76tOfTVgbgXFTkDziVs1odQuvEBQJXJNXp40rFik/%3FupdatedAt%3D1754566149442/https/ik.imagekit.io/pedrolazzz/Pedro%2520Elias%2520%2520%283%29.jpg?format=webp&width=390&height=586"
+                  <img src="https://ik.imagekit.io/pedrolazzz/Pedro%20Elias%20%20(3).jpg?updatedAt=1754566149442"
                     alt="Foto do Dev" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <p className="font-bold text-amber-100">Pedro Elias</p>
@@ -116,7 +116,7 @@ function Footer() {
         </div>
       </section>
 
-      
+
       <div className="flex justify-center bg-yellow-400  text-neutral-900">
         <div className="container flex flex-col items-center py-4">
           <p className="text-xl font-bold">
