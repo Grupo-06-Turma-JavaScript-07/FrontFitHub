@@ -43,11 +43,22 @@ function Cadastro() {
 
     // função responsavel por "entender" quando um campo do formulário é modificado, e preencher isso no estado do Usuario em tempo real
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
-        setUsuario({
-            // ...usuario => mantem o que já tinha no estado
-            ...usuario,
-            // pega o campo que está sendo usado, e preenche com o valor digitado na tela
-            [e.target.name]: e.target.value,
+        const { name, value, type } = e.target;
+
+        setUsuario(prev => {
+            // converte os numéricos
+            if (name === 'weight' || name === 'height' || name === 'imc' || name === 'id') {
+            return {
+                ...prev,
+                [name]: value === '' ? 0 : Number(value),
+            } as Usuario;
+            }
+
+            // demais campos ficam como string
+            return {
+            ...prev,
+            [name]: value,
+            } as Usuario;
         });
     }
 
@@ -69,7 +80,7 @@ function Cadastro() {
             // tenta enviar a requisição para o backend
             try {
                 // utiliza o axios, criado lá no arquivo service, para enviar uma requisição para o backend, de cadastro de usuário
-                await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario);
+                await cadastrarUsuario(`/user`, usuario, setUsuario);
                 // se cadastrar, da um alerta de cadastro com sucesso
                 alert('Usuário cadastrado com sucesso!');
             } catch (error) {
@@ -171,6 +182,38 @@ function Cadastro() {
                             value={confirmaSenha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) =>
                                 handleConfirmarSenha(e)
+                            }
+                        />
+                    </div>
+                    <div className="flex flex-col w-full">
+                        <label htmlFor="peso">Peso</label>
+                        <input
+                            type="number"
+                            id="peso"
+                            name="weight"
+                            placeholder="Insira o seu peso"
+                            className="border-2 border-slate-700 rounded p-2"
+                            // cada um dos inputs precisam receber um campo "value", para que o react possa entender o que está sendo digitado nele, e esse value está vinculado com alguma variavel, nesse caso, com o campo nome do estado Usuario, criado la em cima no useState
+                            value={usuario.weight === 0 ? '' : usuario.weight}
+                            // quando ouverem modificações no campo (onChange), tratar isso como um evento, e atualizar o estado de Usuario
+                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                                atualizarEstado(e)
+                            }
+                        />
+                    </div>
+                    <div className="flex flex-col w-full">
+                        <label htmlFor="altura">Altura</label>
+                        <input
+                            type="number"
+                            id="altura"
+                            name="height"
+                            placeholder="Insira a sua altura"
+                            className="border-2 border-slate-700 rounded p-2"
+                            // cada um dos inputs precisam receber um campo "value", para que o react possa entender o que está sendo digitado nele, e esse value está vinculado com alguma variavel, nesse caso, com o campo nome do estado Usuario, criado la em cima no useState
+                            value={usuario.height === 0 ? '' : usuario.height}
+                            // quando ouverem modificações no campo (onChange), tratar isso como um evento, e atualizar o estado de Usuario
+                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                                atualizarEstado(e)
                             }
                         />
                     </div>

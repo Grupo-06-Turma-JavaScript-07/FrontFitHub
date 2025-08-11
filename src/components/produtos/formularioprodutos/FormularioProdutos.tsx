@@ -1,15 +1,17 @@
 // src/components/produtos/formularioproduto/FormularioProduto.tsx
-import { type ChangeEvent, useEffect, useState } from 'react';
+import { type ChangeEvent, useEffect, useState, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import type Produtos from '../../../model/Produtos';
 import type Categoria from '../../../model/Categoria';
 import { atualizar, buscar, cadastrar } from '../../../services/Service';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
+import { AppContext } from '../../../contexts/AppContext';
 
 function FormularioProduto() {
     const navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-
+    const { user } = useContext(AppContext);
+    
     const [categorias, setCategorias] = useState<Categoria[]>([]);
 
     const [produto, setProduto] = useState<Produtos>({
@@ -57,7 +59,7 @@ function FormularioProduto() {
         // Criamos um objeto para a API, adicionando um usuário fixo
         const produtoParaApi = {
             ...produto,
-            user: { id: 0 }
+            user: { id: user?.id }
         };
 
         if (id !== undefined) {

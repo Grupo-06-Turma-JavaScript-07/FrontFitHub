@@ -1,5 +1,7 @@
 // src/components/dashboard/Dashboard.tsx
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/AppContext';
 
 // Dados estáticos para o nosso gráfico de exemplo
 const data = [
@@ -13,8 +15,9 @@ const data = [
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 function Dashboard() {
+    const { user } = useContext(AppContext);
     // Cálculo de IMC estático, como no design
-    const imc = 29;
+    const imc = user?.imc;
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -1,7 +1,10 @@
 // src/components/sidebar/Sidebar.tsx
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/AppContext';
 
 function Sidebar() {
+  const { user } = useContext(AppContext);
   return (
     <aside className="w-64 bg-neutral-800 text-white flex flex-col p-4 shadow-lg">
       <div className="flex flex-col items-center mb-8">
@@ -10,7 +13,7 @@ function Sidebar() {
           alt="Foto do usuário" 
           className="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover" 
         />
-        <h3 className="mt-4 font-bold text-lg">Nome do Usuário</h3>
+        <h3 className="mt-4 font-bold text-lg">{user?.nome}</h3>
       </div>
 
       <nav className="flex flex-col gap-4 text-lg">

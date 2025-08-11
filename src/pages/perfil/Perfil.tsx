@@ -1,8 +1,11 @@
 // src/pages/perfil/Perfil.tsx
 import Dashboard from "../../components/dashboard/Dashboard";
 import Sidebar from "../../components/sidebar/Sidebar";
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/AppContext';
 
 function Perfil() {
+    const { user } = useContext(AppContext);
     return (
         // Usamos flexbox para alinhar a sidebar e o conteúdo principal lado a lado
         <div className="flex bg-neutral-900 text-white min-h-[85vh]">
@@ -10,7 +13,7 @@ function Perfil() {
 
             <main className="flex-1 p-8">
                 <h1 className="text-4xl font-bold text-yellow-400 font-anton">
-                    BEM VINDO, USUÁRIO!
+                    BEM VINDO, {user?.nome}!
                 </h1>
                 <p className="text-amber-100 mb-8">Acompanhe aqui sua evolução e seu progresso.</p>
 
