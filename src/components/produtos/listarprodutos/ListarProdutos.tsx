@@ -31,13 +31,13 @@ function ListarProdutos() {
             <main className="flex-1 p-8">
                 <div className="flex justify-between items-center mb-8">
                     <h1 className="text-4xl font-bold text-yellow-400 font-anton">
-                        GERENCIAR PRODUTOS
+                        GERENCIAR EXERCÍCIOS
                     </h1>
                     <Link 
                         to="/cadastrarproduto" 
                         className="bg-yellow-400 text-black font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-colors"
                     >
-                        Cadastrar Novo Produto
+                        Cadastrar Novo Exercício
                     </Link>
                 </div>
 

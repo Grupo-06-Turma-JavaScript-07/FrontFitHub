@@ -2,6 +2,7 @@
 import Principal from "../principal/Principal";
 import SobreNos from "../sobrenos/SobreNos";
 import Produtos from "../produtos/Produtos";
+import Equipe from "../sobre/Equipe";
 
 function Home() {
     return (
@@ -16,6 +17,10 @@ function Home() {
             
             <div id="sobrenos">
                 <SobreNos />
+            </div>
+
+             <div id="equipe">
+                <Equipe/>
             </div>
         </>
     );

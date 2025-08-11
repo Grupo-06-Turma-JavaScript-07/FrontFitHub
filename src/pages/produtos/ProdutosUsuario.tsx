@@ -45,7 +45,7 @@ function ProdutosUsuario() {
         <div className="col-span-2">
           <h1 className="text-4xl font-bold text-yellow-400 font-anton mb-8">
             {/* O título agora é dinâmico */}
-            {nomeCategoria.toUpperCase()} - ESCOLHA O TREINO
+            {nomeCategoria.toUpperCase()} - ESCOLHA O EXERCÍCIO
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* O .map agora usa os dados do estado 'produtos' */}
@@ -57,7 +57,7 @@ function ProdutosUsuario() {
 
         <aside className="col-span-1 bg-neutral-800 p-6 rounded-lg">
           <h2 className="text-2xl font-bold uppercase text-yellow-400 font-anton mb-6">
-            Lista de Treinos
+            Lista de exercícios
           </h2>
           <ul className="space-y-4">
             {Array.isArray(produtos) && produtos.map((produto) => (

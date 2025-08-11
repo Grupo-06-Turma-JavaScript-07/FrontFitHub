@@ -29,7 +29,7 @@ function CategoriasUsuario() {
       <main className="flex-1 p-8 grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <h1 className="text-4xl font-bold text-yellow-400 font-anton mb-8">
-            ESCOLHA A CATEGORIA
+            ESCOLHA O TREINO
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
            
@@ -41,7 +41,7 @@ function CategoriasUsuario() {
 
         <aside className="col-span-1 bg-neutral-800 p-6 rounded-lg">
           <h2 className="text-2xl font-bold uppercase text-yellow-400 font-anton mb-6">
-            Lista de Categorias
+            Lista de treino
           </h2>
           <ul className="space-y-4">
        

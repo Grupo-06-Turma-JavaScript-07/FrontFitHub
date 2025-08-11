@@ -1,14 +1,14 @@
 function Produtos() {
     return (
-        <section className="px-4 md:px-15 py-10 w-full max-w-8xl mx-auto bg-neutral-900">
-            <h2 className="text-4xl lg:text-5xl my-15 font-bold uppercase text-yellow-400 font-anton text-center">
+        <section className="w-full bg-neutral-900 py-40 px-4">
+            <h2 className="text-4xl lg:text-5xl my font-bold uppercase text-yellow-400 font-anton text-center">
                 O que oferecemos?
             </h2>
 
-            <h4 className="text-1xl lg:text-1xl my-15 text-amber-100 font-anton text-center">
+            <h4 className="text-1xl lg:text-1xl my-15 text-amber-100 font-anton text-center mt-7 mb-8">
                 Estamos empenhados em trazer a melhor experiência e treino.
             </h4>
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-8 md:mt-12 lg:mt-20">
 
                 <div className="grid md:grid-cols-3 gap-10 text-center">
 

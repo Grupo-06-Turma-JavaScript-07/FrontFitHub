@@ -21,8 +21,8 @@ function SidebarPersonal() {
       <nav className="flex flex-col gap-4 text-lg">
       
         <Link to="/home" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Home</Link>
-        <Link to="/categorias/gerenciar" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Gerenciar Categorias</Link>
-        <Link to="/produtos/gerenciar" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Gerenciar Produtos</Link>
+        <Link to="/categorias/gerenciar" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Gerenciar Treino</Link>
+        <Link to="/produtos/gerenciar" className="px-2 py-1 rounded hover:bg-neutral-700 transition-colors">Gerenciar Exercício</Link>
       </nav>
 
       <div className="mt-auto flex justify-center p-4">

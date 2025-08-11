@@ -34,7 +34,7 @@ function Login() {
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
-            <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
+            <form className="flex justify-center items-center flex-col w-1/1.5 gap-4 pl-30" onSubmit={login}>
                 <h2 className="text-slate-900 text-5xl">Faça seu Login</h2>
                 
                 {/* SELEÇÃO DE PERFIL */}
