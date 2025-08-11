@@ -8,7 +8,7 @@ export default interface Usuario {
   foto: string
   weight: number; 
   height: number; 
-  // imc: number; 
-//   verificar no back esse campo imc
+  imc?: number; 
+  
   product?: Produtos[] | null
 }

@@ -14,7 +14,7 @@ function Perfil() {
             BEM VINDO, {usuario.nome?.toUpperCase()}!
         </h1>
         <p className="text-amber-100 mb-8">Acompanhe aqui sua evolução e seu progresso.</p>
-        <Dashboard />
+         <Dashboard usuario={usuario} />
       </main>
     </div>
   );
