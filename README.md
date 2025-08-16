@@ -58,6 +58,8 @@ O projeto foi construído com uma arquitetura Full Stack, utilizando tecnologias
 
 ### ⚙️ Back-end (Nest.js)
 
+**Link do Repositório:** [https://github.com/Grupo-06-Turma-JavaScript-07/FitHub](https://github.com/Grupo-06-Turma-JavaScript-07/FitHub)
+
 - **Nest.js com TypeScript:** Framework robusto e escalável para a construção da API.
 - **MySQL com TypeORM:** Para o armazenamento e manipulação dos dados de forma segura e eficiente.
 - **Testes de API:** Todas as rotas foram validadas com a ferramenta **Insomnia** para garantir o funcionamento correto do CRUD.
